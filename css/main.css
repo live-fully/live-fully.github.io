@@ -1,6 +1,7 @@
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+  background-color: #109cff !important;
 }
 .jumbotron .container {
     text-align: center;
@@ -20,4 +21,33 @@ body {
     width: 10em;
     height: 10em;
     /*background-image: url(./images/startup-weekend-logo.png);*/
+}
+
+.navbar {
+    margin-bottom: 2em;
+}
+
+.concierge {
+    border: 2px solid blue;
+}
+
+.choice {
+    display: inline-block;
+    float: left;
+    margin: 30px 0 30px 130px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #6DD0F2;
+    border-radius: 5px;
+}
+
+.choice img {
+    width: 60%
+}
+
+.choice-button {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: franklin-gothic-urw, nimbus-sans, 'Helvetica Neue', Helvetica, sans-serif;
+    padding-top: 10px;
 }

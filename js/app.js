@@ -12,7 +12,7 @@ $(document).ready(function() {
   var PARAMS = {
     hitsPerPage: 10,
     maxValuesPerFacet: 8,
-    // facets: ['type'],
+    facets: ['name'],
     disjunctiveFacets: ['state', 'city', 'followers']
   };
   var FACETS_SLIDER = ['followers'];
@@ -96,6 +96,7 @@ $(document).ready(function() {
 
   function renderHits(content) {
     $hits.html(hitTemplate.render(content));
+
   }
 
   function renderFacets(content, state) {
@@ -302,6 +303,7 @@ $(document).ready(function() {
     if (URLHistoryTimer > now) {
       window.history.replaceState(null, '', '?' + helperParams + nonAlgoliaURLHash);
     } else {
+
       window.history.pushState(null, '', '?' + helperParams + nonAlgoliaURLHash);
     }
     URLHistoryTimer = now+URLHistoryThreshold;

@@ -10,15 +10,15 @@ html {
 	overflow-y: scroll;
 }
 header, main, #no-results, footer {
-	width: 1000px;
-	margin: 0 auto;
+	width: 1200px;
+
 }
 main {
 	min-height: 360px;
 }
 #left-column {
 	float: left;
-	width: 23%;
+	width: 20%;
 }
 #right-column {
 	width: 74%;
@@ -94,6 +94,10 @@ header img {
 	font-size: 0;
 	padding: 8px 0;
 	border-bottom: 1px solid #eee;
+	width: 290px;
+	height: 300px;
+	display: inline-block;
+	border: 1px solid grey;
 }
 .hit-image {
 	display: inline-block;
