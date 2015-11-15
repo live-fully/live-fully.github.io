@@ -22,17 +22,12 @@
           </button>
           <a class="navbar-brand bar" href="./index.html">Fully Home</a>
           <a class="navbar-brand bar" href="./search.html">Search Your List</a>
-          <a class="navbar-brand" href="./test.html">Discover</a>
+          <a class="navbar-brand bar" href="./test.html">Discover</a>
+          <a class="navbar-brand" href="#">Upgrade</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Username" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <a href="./signin.html" class="btn btn-success">Sign in</a>
+            <a href="./signin.html" class="btn btn-success">Sign Out</a>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -43,7 +38,7 @@
       <div class="container">
 
             <!-- <img src="img/instant_search_logo@2x.png"/> -->
-            <input id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" placeholder="Search by Thing"/>
+            <input id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" placeholder="Search by Name, Category, or Tag"/>
             <div id="search-input-icon"></div>
       </div>
     </div>
@@ -69,7 +64,7 @@
   <!-- Footer -->
   <footer>
     Source Code on <a href="http://github.com/algolia/instant-search-demo">Github</a> -
-    Powered by <a href="http://algolia.com">Algolia</a> - Data from <a href="https://developer.bestbuy.com">Best Buy</a>
+    Powered by <a href="http://algolia.com">Algolia</a>
   </footer>
   <!-- /Footer -->
 
@@ -79,13 +74,15 @@
   <script type="text/template" id="hit-template">
     {{#hits}}
     <div class="hit">
-      <div class="hit-image">
-        <img src="./images/{{ image }}" alt="{{ name }}">
-      </div>
-      <div class="hit-content">
-        <h2 class="hit-name">{{{ _highlightResult.name.value }}}</h2>
-        <p class="hit-description">{{{ _highlightResult.description.value }}}</p>
-      </div>
+        <a href="{{{ _highlightResult.link.value }}}">
+          <div class="hit-image">
+            <img src="./images/{{ image }}" alt="{{ name }}">
+          </div>
+          <div class="hit-content">
+            <h2 class="hit-name">{{{ _highlightResult.name.value }}}</h2>
+            <p class="hit-description">{{{ _highlightResult.description.value }}}</p>
+          </div>
+        </a>
     </div>
     {{/hits}}
   </script>
@@ -121,7 +118,7 @@
 
   <!-- Pagination template -->
   <script type="text/template" id="pagination-template">
-    <ul>
+    <ul class='paginate'>
       <li {{^prev_page}}class="disabled"{{/prev_page}}><a href="#" {{#prev_page}}class="go-to-page" data-page="{{ prev_page }}"{{/prev_page}}>&#60;</a></li>
       {{#pages}}
       <li class="{{#current}}active{{/current}} {{#disabled}}disabled{{/disabled}}"><a href="#" {{^disabled}} class="go-to-page" data-page="{{ number }}" {{/disabled}}>{{ number }}</a></li>

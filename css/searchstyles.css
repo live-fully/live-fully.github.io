@@ -159,7 +159,8 @@ header img {
 }
 #pagination li {
 	font-size: 14px;
-	display: inline;
+	display: inline-block;
+	margin-top: 20px;
 }
 #pagination a {
 	padding: 8px 12px;
@@ -389,4 +390,8 @@ footer a {
 footer a:hover {
 	text-decoration: underline;
 	color: #ed5565;
+}
+
+.paginate {
+	margin-top: 10px;
 }
