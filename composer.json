@@ -1,5 +1,6 @@
 {
   "require": {
-    "algolia/algoliasearch-client-php": "1.5.*"
+    "algolia/algoliasearch-client-php": "1.5.*",
+    "twbs/bootstrap": "^3.3"
   }
 }
