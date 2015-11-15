@@ -1,7 +1,7 @@
 body {
   padding-top: 50px;
   padding-bottom: 20px;
-  background-color: #109cff !important;
+  background-color: #fdb597 !important;
 }
 .jumbotron .container {
     text-align: center;
@@ -28,7 +28,7 @@ body {
 }
 
 .concierge {
-    border: 2px solid blue;
+    border: 2px solid #ff8958;
 }
 
 .choice {
@@ -37,7 +37,7 @@ body {
     margin: 30px 0 30px 130px;
     text-align: center;
     padding-top: 10px;
-    background-color: #6DD0F2;
+    background-color: #ff8958;
     border-radius: 5px;
     min-height: 220px;
     width: 200px;

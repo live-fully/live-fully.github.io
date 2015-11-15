@@ -88,7 +88,7 @@ header img {
 #hits {
 	margin: 4px 0;
 	padding: 10px 0;
-	border-top: 2px solid #eee;
+	border-top: 2px solid #ff8958;
 }
 .hit {
 	position: relative;
@@ -99,7 +99,7 @@ header img {
 	display: inline-block;
 	text-align: center;
 	border-radius: 5px;
-	border: 2px solid #37a1ec;
+	border: 2px solid #ff8958;
 	float: left;
 }
 .hit-image {
@@ -123,7 +123,7 @@ header img {
 }
 
 .hit:hover {
-	background-color: #37a1ec;
+	background-color: #ffcfba;
 }
 
 .hit-content .hit-price {
