@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Discover</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Fully</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+</head>
+<body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand bar" href="./index.html">Fully Home</a>
+	          <a class="navbar-brand bar" href="./search.html">Search Your List</a>
+	          <a class="navbar-brand bar" href="./discover.html">Discover</a>
+	          <a class="navbar-brand" href="#">Upgrade</a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	          <div class="navbar-form navbar-right">
+	            <a href="./index.html" class="btn btn-success">Sign Out</a>
+	        </div>
+	        </div><!--/.navbar-collapse -->
+	      </div>
+	    </nav>
+
+	    <!-- Main jumbotron for a primary marketing message or call to action -->
+	    <div class="jumbotron">
+	      <div class="container">
+	        <h1>Hello!</h1>
+	        <h3>Dicover things you tagged around you</h3>
+	      </div>
+	    </div>
+
+	    <div class="container">
+			<div id="map" style="width:50%;height:50%;" onload="currentLocation();">
+			</div>
+		</div>
+
+		<script>
+        function currentLocation() {
+            navigator.geolocation.getCurrentPosition(initMap);
+        }
+        function initMap(position) {
+            var myLatLng = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Current Location'
+            });
+
+            var marker = new google.maps.Marker({
+                position: {lat: 45.5342232, lng: -122.6985948},
+                map: map,
+                title: 'Restaurant St. Jack'
+            });
+
+            var marker = new google.maps.Marker({
+                position: {lat: 45.519271, lng: -122.677912},
+                map: map,
+                title: 'Departure'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 45.5050351, lng: -122.6299572},
+                map: map,
+                title: 'Ava Genes'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 45.505519, lng: -122.613613},
+                map: map,
+                title: 'Good Coffee'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 45.505042, lng: -122.627816},
+                map: map,
+                title: 'SE Wine Collective'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 45.496901, lng: -122.634811},
+                map: map,
+                title: 'Hopworks Urban Brewery'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 45.546242, lng: -122.675993},
+                map: map,
+                title: 'Liberty Glass'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 45.523105, lng: -122.641648},
+                map: map,
+                title: 'Screen Door'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 45.523954, lng: -122.661404},
+                map: map,
+                title: 'Cup and Bar'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 45.520989, lng: -122.683457},
+                map: map,
+                title: 'Multnomah Whiskey Library'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 45.526528, lng: -122.685168},
+                map: map,
+                title: 'Firebrand Sports'
+            });
+
+
+        }
+
+
+		currentLocation(); </script>
+</body>
+</html>
