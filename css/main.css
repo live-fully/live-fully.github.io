@@ -6,7 +6,18 @@ body {
     text-align: center;
 }
 
-.navbar-brand.first {
+.navbar-brand.bar {
     border-right: 2px solid white;
     margin-right: 1em;
+}
+
+.category .item {
+    padding: 5px;
+    border: 1px solid blue;
+}
+
+.item .image {
+    width: 10em;
+    height: 10em;
+    /*background-image: url(./images/startup-weekend-logo.png);*/
 }
