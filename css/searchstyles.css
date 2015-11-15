@@ -91,22 +91,28 @@ header img {
 	border-top: 2px solid #eee;
 }
 .hit {
+	position: relative;
 	font-size: 0;
 	padding: 8px 0;
-	border-bottom: 1px solid #eee;
 	width: 290px;
 	height: 300px;
 	display: inline-block;
-	border: 1px solid grey;
+	text-align: center;
+	border-radius: 5px;
+	border: 2px solid #37a1ec;
+	float: left;
 }
 .hit-image {
-	display: inline-block;
-	width: 16%;
+	display: block;
+    width: 70%;
+    margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .hit-image img {
-	max-width: 100%;
-	max-height: 180px;
+	width: 100%;
 }
+
 .hit-content {
 	font-size: 13px;
 	font-weight: 300;
@@ -115,6 +121,11 @@ header img {
 	margin-left: 1%;
 	vertical-align: top;
 }
+
+.hit:hover {
+	background-color: #37a1ec;
+}
+
 .hit-content .hit-price {
 	font-size: 20px;
 	float: right;

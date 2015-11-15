@@ -8,16 +8,16 @@ $(document).ready(function() {
   // Replace with your own values
   var APPLICATION_ID = 'EZKATKXQMK';
   var SEARCH_ONLY_API_KEY = '29771136e84846f06746dd1799bf74fa';
-  var INDEX_NAME = 'start_people';
+  var INDEX_NAME = 'live_fully';
   var PARAMS = {
-    hitsPerPage: 10,
+    hitsPerPage: 9,
     maxValuesPerFacet: 8,
     facets: ['name'],
-    disjunctiveFacets: ['state', 'city', 'followers']
+    disjunctiveFacets: ['category', 'tag']
   };
-  var FACETS_SLIDER = ['followers'];
-  var FACETS_ORDER_OF_DISPLAY = ['followers', 'state', 'city'];
-  var FACETS_LABELS = {followers: 'Followers', state: 'State', city: 'City'};
+  var FACETS_SLIDER = [];
+  var FACETS_ORDER_OF_DISPLAY = ['tag', 'category'];
+  var FACETS_LABELS = {tag: 'Tags', category: 'Categories'};
 
   // Client + Helper initialization
   var algolia = algoliasearch(APPLICATION_ID, SEARCH_ONLY_API_KEY);

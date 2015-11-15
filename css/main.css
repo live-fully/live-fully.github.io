@@ -39,6 +39,8 @@ body {
     padding-top: 10px;
     background-color: #6DD0F2;
     border-radius: 5px;
+    min-height: 200px;
+    width: 200px;
 }
 
 .choice img {
@@ -50,4 +52,9 @@ body {
     font-weight: bold;
     font-family: franklin-gothic-urw, nimbus-sans, 'Helvetica Neue', Helvetica, sans-serif;
     padding-top: 10px;
+}
+
+.back-button {
+    float:left !important;
+    position: absolute;
 }
